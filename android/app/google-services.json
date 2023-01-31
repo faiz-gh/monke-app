@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "298394920421",
+    "project_id": "monke-app",
+    "storage_bucket": "monke-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:298394920421:android:06f7022e5e6a91f2aebb0c",
+        "android_client_info": {
+          "package_name": "com.monke.app.monke_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "298394920421-o8lmk33r4g9sp2hb4iqm3ujb65b5th8r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPPoSToX3HqZl0Yp3Hs6cNLr_F2ti0Mwg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "298394920421-o8lmk33r4g9sp2hb4iqm3ujb65b5th8r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
