@@ -11,7 +11,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int counter = 0;
+  double counter = 0;
   XFile? image;
   final storage = FirebaseStorage.instance;
 
@@ -24,7 +24,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void _openCamera() async {
-    XFile? file = await ImagePicker().pickImage(source: ImageSource.gallery);
+    XFile? file = await ImagePicker().pickImage(source: ImageSource.camera);
     setState(() {
       image = file;
     });
@@ -80,7 +80,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 tooltip: 'Save the Photo',
                 heroTag: null,
                 backgroundColor: Colors.green,
-                child: Icon(Icons.document_scanner_rounded),
+                child: Icon(Icons.camera_alt_rounded),
               )],
           )
       ),
@@ -96,7 +96,7 @@ class BigCard extends StatelessWidget {
   }) : super(key: key);
 
   final ThemeData theme;
-  final int counter;
+  final double counter;
 
   @override
   Widget build(BuildContext context) {

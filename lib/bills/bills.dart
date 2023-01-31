@@ -16,7 +16,7 @@ class _BillsState extends State<Bills> {
         title: const Text('Bills'),
       ),
       body: StreamBuilder<QuerySnapshot>(
-        stream: FirebaseFirestore.instance.collection('bills').snapshots(),
+        stream: FirebaseFirestore.instance.collection('bills').orderBy('date', descending: true).snapshots(),
         builder: (context, snapshot) {
           if (!snapshot.hasData) {
             return Center(
