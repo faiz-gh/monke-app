@@ -30,7 +30,9 @@ class _MyHomePageState extends State<MyHomePage> {
     });
     if (image != null) {
       // ignore: use_build_context_synchronously
-      Navigator.pushNamed(context, '/preview',
+      Navigator.pushNamed(
+          context,
+          '/preview',
           arguments: <String, XFile?>{'photo': image});
     }
   }
@@ -46,7 +48,6 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(
           'Monke',
         ),
-        leading: Icon(Icons.menu),
       ),
       body: Center(
         child: Column(
@@ -58,10 +59,30 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: theme.colorScheme.primary,
-        onPressed: () => _openCamera(),
-        child: Icon(Icons.camera_alt_rounded),
+      floatingActionButton: Padding(
+          padding: const EdgeInsets.fromLTRB(30, 0, 0, 0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              FloatingActionButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/bills');
+                },
+                tooltip: 'Return to Homescreen',
+                heroTag: null,
+                backgroundColor: Colors.blue,
+                child: Icon(Icons.receipt_long_rounded),
+              ),
+              FloatingActionButton(
+                onPressed: () {
+                  _openCamera();
+                },
+                tooltip: 'Save the Photo',
+                heroTag: null,
+                backgroundColor: Colors.green,
+                child: Icon(Icons.document_scanner_rounded),
+              )],
+          )
       ),
     );
   }

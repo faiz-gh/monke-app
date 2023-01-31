@@ -62,27 +62,29 @@ class _PreviewState extends State<Preview> {
       FloatingActionButtonLocation.miniCenterFloat,
       floatingActionButton: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16.0),
-          child:
-          Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-            FloatingActionButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              tooltip: 'Return to Homescreen',
-              heroTag: null,
-              backgroundColor: Colors.red,
-              child: Icon(Icons.close),
-            ),
-            FloatingActionButton(
-              onPressed: () {
-                saveFile();
-              },
-              tooltip: 'Save the Photo',
-              heroTag: null,
-              backgroundColor: Colors.green,
-              child: Icon(Icons.check),
-            ),
-          ])),
+          child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                FloatingActionButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  tooltip: 'Return to Homescreen',
+                  heroTag: null,
+                  backgroundColor: Colors.red,
+                  child: Icon(Icons.close),
+                ),
+                FloatingActionButton(
+                  onPressed: () {
+                    saveFile();
+                  },
+                  tooltip: 'Save the Photo',
+                  heroTag: null,
+                  backgroundColor: Colors.green,
+                  child: Icon(Icons.check),
+                )],
+          )
+      ),
     );
   }
 }
